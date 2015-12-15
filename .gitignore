@@ -10,16 +10,3 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-.DS_Store
-/bin
-/target
-acceptance/bin
-acceptance/.settings/
-acceptance/logs/
-acceptance/sahi/userdata/browser
-acceptance/sahi/userdata/certs
-acceptance/sahi/userdata/logs
-.idea/workspace.xml
-.idea/
-*.iml
-
