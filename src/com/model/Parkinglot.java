@@ -28,10 +28,8 @@ public class Parkinglot {
             throw new NoSpaceAvailableException();
         if(carsParked.values().contains(car))
             throw new CarAlreadyParkedException();
-        for (ParkingTicket parkingTicket : carsParked.keySet()) {
-            if(parkingTicket.getParkingSlot()==parkingSlot)
-                throw new ParkingSlotNotAvailableException();
-        }
+        
+        if(carsParked.keySet().stream().anyMatch(t->t.getParkingSlot()==parkingSlot)) throw new ParkingSlotNotAvailableException();
 
         ParkingTicket ticket = new ParkingTicket(parkingSlot);
         carsParked.put(ticket,car);
